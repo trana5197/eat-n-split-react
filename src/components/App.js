@@ -50,7 +50,7 @@ export default function App() {
           : friend
       )
     );
-    setSelected(null);
+    // setSelected(null);
   }
 
   return (
@@ -68,7 +68,11 @@ export default function App() {
         </Button>
       </div>
       {selected && (
-        <SplitBill selectedFriend={selected} onSplitBill={handleSplitBill} />
+        <SplitBill
+          selectedFriend={selected}
+          onSplitBill={handleSplitBill}
+          key={selected.id}
+        />
       )}
     </div>
   );

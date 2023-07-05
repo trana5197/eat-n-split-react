@@ -13,6 +13,10 @@ export default function SplitBill({ selectedFriend, onSplitBill }) {
     if (!bill || !myExpense) return;
 
     onSplitBill(billPaidBy === "you" ? paidByFriend : -myExpense);
+
+    setBill("");
+    setMyExpense("");
+    setBillPaidBy("you");
   }
 
   return (
